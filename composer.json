@@ -1,0 +1,42 @@
+{
+    "name": "theahmadzai/immortal-framework",
+    "description": "PHP - Lightweight, The Immortal Framework.",
+    "type": "library",
+    "keywords": ["framework", "immortal","mvc","router"],
+    "homepage": "https://github.com/theahmadzai/Immortal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javed Ahmadzai",
+            "email": "theahmadzai@hotmail.com",
+            "homepage": "http://www.codeinvoker.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "theahmadzai@hotmail.com",
+        "issues": "https://github.com/theahmadzai/immortal/issues",
+        "source": "https://github.com/theahmadzai/immortal"
+    },
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Immortal\\": "framework"
+        }
+    },
+    "autoload-dev": {},
+    "minimum-stability": "dev",
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
