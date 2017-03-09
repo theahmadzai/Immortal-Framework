@@ -13,7 +13,7 @@ Framework library for Immortal MVC Application, Includes routing and all the cor
 
 ## Installation
 
-> **Note:** This repository contains the core code of the Immortal Framework. If you want to build an application using Immortal Framework, visit the main [Immortal Application repository](https://github.com/theahmadzai/immortal).
+> **Note:** This repository contains the core code of the Immortal Framework. If you want to build an application using Immortal Framework, visit the main [Immortal Application repository](https://github.com/theahmadzai/immortal-application).
 
 It's recommended that you use [Composer](https://getcomposer.org/) to install Immortal Framework.
 
