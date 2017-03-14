@@ -6,29 +6,21 @@ class View
     public static function make($file, $data = [])
     {
         $loader = new \Twig_Loader_Filesystem(APP_ROOT . '/resources/views');
-        $twig   = new \Twig_Environment($loader);//,['cache' => APP_ROOT . '/cache',]
+        $twig   = new \Twig_Environment($loader); //,['cache' => APP_ROOT . '/cache',]
 
-        $twig->addGlobal('ASSET_ROOT', ASSET_ROOT.'../');
+        $twig->addGlobal('ASSET_ROOT', ASSET_ROOT . '../');
 
-        try
-        {
-            if (is_null($data))
-            {
+        try {
+            if (is_null($data)) {
                 return $twig->render($file);
             }
 
             return $twig->render($file, $data);
-        }
-        catch (Twig_Error_Loader $e)
-        {
+        } catch (Twig_Error_Loader $e) {
             return $this->getErrorMessage('loader', $e->getMessage());
-        }
-        catch (Twig_Error_Runtime $e)
-        {
+        } catch (Twig_Error_Runtime $e) {
             return $this->getErrorMessage('runtime', $e->getMessage());
-        }
-        catch (Twig_Error_Syntax $e)
-        {
+        } catch (Twig_Error_Syntax $e) {
             return $this->getErrorMessage('syntax', $e->getMessage());
         }
     }

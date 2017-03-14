@@ -10,8 +10,7 @@ class HttpException extends \Exception
     {
         $content = [];
 
-        switch ($e['error'])
-        {
+        switch ($e['error']) {
             case 403:
                 View::make('errors/403', ['error' => 'Invalid url: ' . Request::get('url')]);
                 break;

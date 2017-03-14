@@ -3,7 +3,7 @@ namespace Immortal;
 
 class Router
 {
-    private static $_instance = null;
+    private static $instance = null;
 
     private $routes = [];
     private $params = [];
@@ -16,12 +16,11 @@ class Router
 
     public static function getInstance()
     {
-        if (!isset(self::$_instance))
-        {
-            self::$_instance = new Router();
+        if (!isset(self::$instance)) {
+            self::$instance = new Router();
         }
 
-        return self::$_instance;
+        return self::$instance;
     }
 
     public function getParams()
@@ -33,32 +32,27 @@ class Router
     {
         $routes = [];
 
-        foreach ($definitions as $pattern => $route)
-        {
+        foreach ($definitions as $pattern => $route) {
             $url_parts  = explode('/', trim($pattern, '/'));
             $url_params = [];
 
-            foreach ($url_parts as $i => $part)
-            {
-                if (strpos($part, ':') === 0)
-                {
-                    $name              = trim(substr($part, 1), '?');
-                    $type              = (strpos(trim($part, ':'), '?') === 0) ? true : false;
-                    $reset_part        = (strpos(trim($part, ':'), '?') === 0) ? '?(?P<' . $name . '>[^/]+)?' : '(?P<' . $name . '>[^/]+)';
+            foreach ($url_parts as $i => $part) {
+                if (strpos($part, ':') === 0) {
+                    $name       = trim(substr($part, 1), '?');
+                    $type       = (strpos(trim($part, ':'), '?') === 0) ? true : false;
+                    $reset_part = (strpos(trim($part, ':'), '?') === 0) ?
+                    '?(?P<' . $name . '>[^/]+)?' :
+                    '(?P<' . $name . '>[^/]+)';
                     $url_parts[$i]     = $reset_part;
                     $url_params[$name] = $type;
                 }
             }
             $pattern = implode('/', $url_parts);
 
-            if (is_callable(($route)))
-            {
+            if (is_callable(($route))) {
                 $params['controller'] = false;
                 $params['method']     = $route;
-
-            }
-            else
-            {
+            } else {
                 $route = explode('@', $route);
 
                 $params['controller'] = $route[0];
@@ -77,22 +71,16 @@ class Router
     {
         $url = filter_var(trim(strtolower($url), '/'), FILTER_SANITIZE_URL);
 
-        foreach ($this->routes as $pattern => $params)
-        {
-            if (preg_match('~^' . $pattern . '$~', $url, $matches))
-            {
-                foreach ($matches as $key => $value)
-                {
-                    if (array_key_exists($key, $params['params']))
-                    {
+        foreach ($this->routes as $pattern => $params) {
+            if (preg_match('~^' . $pattern . '$~', $url, $matches)) {
+                foreach ($matches as $key => $value) {
+                    if (array_key_exists($key, $params['params'])) {
                         $params['params'][$key] = $value;
                     }
                 }
 
-                foreach ($params['params'] as $key => $value)
-                {
-                    if ($value === true)
-                    {
+                foreach ($params['params'] as $key => $value) {
+                    if ($value === true) {
                         unset($params['params'][$key]);
                     }
                 }

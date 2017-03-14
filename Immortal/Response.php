@@ -17,17 +17,12 @@ class Response
 
     public static function sendHeaders()
     {
-        if (!headers_sent())
-        {
-            if (!empty(self::$headers))
-            {
-                foreach (self::$headers as $header)
-                {
+        if (!headers_sent()) {
+            if (!empty(self::$headers)) {
+                foreach (self::$headers as $header) {
                     header($header);
                 }
-            }
-            else
-            {
+            } else {
                 header('HTTP/1.0 200 OK');
             }
         }
