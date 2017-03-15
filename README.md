@@ -1,11 +1,11 @@
-<p align="center"># Immortal Framework
+# Immortal Framework
 
 [![Build Status](https://travis-ci.org/theahmadzai/Immortal-Framework.svg?branch=master)](https://travis-ci.org/theahmadzai/Immortal-Framework)
 [![HHVM Status](http://hhvm.h4cc.de/badge/theahmadzai/immortal-framework.svg?style=flat)](http://hhvm.h4cc.de/package/theahmadzai/immortal-framework)
 [![Total Downloads](https://poser.pugx.org/theahmadzai/immortal-framework/downloads)](https://packagist.org/packages/theahmadzai/immortal-framework)
 [![Latest Stable Version](https://poser.pugx.org/theahmadzai/immortal-framework/v/stable)](https://packagist.org/packages/theahmadzai/immortal-framework)
 [![Latest Unstable Version](https://poser.pugx.org/theahmadzai/immortal-framework/v/unstable)](//packagist.org/packages/theahmadzai/immortal-framework)
-[![License](https://poser.pugx.org/theahmadzai/immortal-framework/license)](https://packagist.org/packages/theahmadzai/immortal-framework)</p>
+[![License](https://poser.pugx.org/theahmadzai/immortal-framework/license)](https://packagist.org/packages/theahmadzai/immortal-framework)
 
 Immortal-Framework is a library Package for Immortal-Application, Contains all the core functionality required to build an awesome web application.
 
