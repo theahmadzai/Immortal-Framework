@@ -7,21 +7,19 @@
 [![Latest Unstable Version](https://poser.pugx.org/theahmadzai/immortal-framework/v/unstable)](//packagist.org/packages/theahmadzai/immortal-framework)
 [![License](https://poser.pugx.org/theahmadzai/immortal-framework/license)](https://packagist.org/packages/theahmadzai/immortal-framework)
 
------------------------------------
-
-Framework library for Immortal MVC Application, Includes routing and all the core functionality.
+Immortal-Framework is a library Package for Immortal-Application, Contains all the core functionality required to build an awesome web application.
 
 ## Installation
 
-> **Note:** This repository contains the core code of the Immortal Framework. If you want to build an application using Immortal Framework, visit the main [Immortal Application repository](https://github.com/theahmadzai/immortal-application).
+> **Note:** This repository only contains the core functionality. If you want to build an application using Immortat-Framework, visit the main [Immortal Application repository](https://github.com/theahmadzai/immortal-application).
 
-It's recommended that you use [Composer](https://getcomposer.org/) to install Immortal Framework.
+It's recommended that you use [Composer](https://getcomposer.org/) to install Immortal-Framework.
 
 ```bash
 $ composer require theahmadzai/immortal-framework
 ```
 
-This will install Immortal Framework and all required dependencies.
+This will install Immortal-Framework and all required dependencies.
 
 ## Requirements
 
@@ -37,12 +35,32 @@ Supports the following versions of PHP.
 To execute the test suite, you'll need phpunit.
 
 ```bash
-$ phpunit
+$ ./vendor/bin/phpunit
 ```
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+### Pull Requests
+
+1. Fork the Immortal-Framework repository
+2. Create a new branch for each feature or improvement
+3. Send a pull request from each feature branch to the **public** branch
+
+### Style Guide
+
+All pull requests must adhere to the [PSR-2 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md).
+
+You can use following command to check for PSR-2 coding standard.
+
+```bash
+$ ./vendor/bin/phpcs
+```
+
+To fix coding standard automatically.
+
+```bash
+$ ./vendor/bin/phpcbf
+```
 
 ## Security
 
