@@ -37,7 +37,7 @@ class App
     private function runController($controller)
     {
         if (!class_exists($controller) && $controller !== false) {
-            $controller = "App\Http\Controllers\\$controller";
+            $controller = "App\Controllers\\$controller";
             if (class_exists($controller)) {
                 return new $controller($this);
             }

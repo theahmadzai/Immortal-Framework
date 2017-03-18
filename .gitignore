@@ -1,5 +1,5 @@
 desktop.ini
 .DS_Store
 Thumbs.db
-vendor
+/vendor
 composer.lock
