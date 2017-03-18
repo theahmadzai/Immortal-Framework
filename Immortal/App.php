@@ -30,8 +30,7 @@ class App
             } else {
                 throw new HttpException(['error' => 404, 'url' => Request::get('url')]);
             }
-        } catch (HttpException $e) {
-        };
+        } catch (HttpException $e) {};
     }
 
     private function runController($controller)
