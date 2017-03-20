@@ -8,8 +8,7 @@ php:
   - 7.1
   - hhvm
 
-before_script:
-  - composer self-update
+before_script: composer self-update
 
 install: travis_retry composer install --no-interaction --prefer-source
 
