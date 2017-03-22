@@ -1,0 +1,57 @@
+{
+    "name": "theahmadzai/immortal-framework",
+    "description": "Immortal Framework (Library) http://www.codeinvoker.com",
+    "type": "library",
+    "keywords": ["immortal", "framework"],
+    "homepage": "https://github.com/theahmadzai/immortal-framework",
+    "license": "MIT",
+    "authors": [{
+        "name": "Javed Ahmadzai",
+        "email": "theahmadzai@hotmail.com",
+        "homepage": "http://www.codeinvoker.com",
+        "role": "Developer"
+    }],
+    "support": {
+        "email": "theahmadzai@hotmail.com",
+        "issues": "https://github.com/theahmadzai/immortal-framework/issues",
+        "source": "https://github.com/theahmadzai/immortal-framework"
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "nikic/fast-route": "^1.0",
+        "pimple/pimple": "^3.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.8",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Immortal\\": "Immortal"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Immortal\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@phpunit",
+            "@phpcs"
+        ],
+        "phpunit": "phpunit",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf"
+    }
+}

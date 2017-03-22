@@ -1,0 +1,5 @@
+desktop.ini
+.DS_Store
+Thumbs.db
+/vendor
+composer.lock
