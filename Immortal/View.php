@@ -1,5 +1,4 @@
 <?php
-
 namespace Immortal;
 
 class View
@@ -7,7 +6,7 @@ class View
     public static function make($file, $data = [])
     {
         $loader = new \Twig_Loader_Filesystem(VIEW_ROOT);
-        $twig = new \Twig_Environment($loader); //,['cache' => APP_ROOT . '/cache',]
+        $twig   = new \Twig_Environment($loader); //,['cache' => APP_ROOT . '/cache',]
         $twig->addGlobal('ASSET_ROOT', ASSET_ROOT);
 
         try {
@@ -27,6 +26,6 @@ class View
 
     private function getErrorMessage($errorType, $errorMessage)
     {
-        return sprintf('A %s error occured: %s', $errorType, $errorMessage);
+        return sprintf("A %s error occured: %s", $errorType, $errorMessage);
     }
 }

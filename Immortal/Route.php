@@ -1,5 +1,4 @@
 <?php
-
 namespace Immortal;
 
 class Route
