@@ -1,4 +1,5 @@
 <?php
+
 namespace Immortal;
 
 class App
@@ -31,7 +32,7 @@ class App
                 throw new HttpException(['error' => 404, 'url' => Request::get('url')]);
             }
         } catch (HttpException $e) {
-        };
+        }
     }
 
     private function runController($controller)
