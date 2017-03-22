@@ -1,4 +1,5 @@
 <?php
+
 namespace Immortal;
 
 class Response
