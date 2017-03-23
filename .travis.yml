@@ -24,9 +24,9 @@ script:
   - composer install -n
 
 after_script:
-  - vendor/bin/phpunit --coverage-clover clover.xml
-  - vendor/bin/coveralls --coverage_clover=clover.xml -v
-  - vendor/bin/test-reporter -r
+  - vendor/bin/phpunit --coverage-clover /build/logs/clover.xml
+  - vendor/bin/coveralls --coverage_clover=/build/logs/clover.xml -v
+  - vendor/bin/test-reporter
 
 notifications:
   email: false
