@@ -10,7 +10,7 @@ php:
 
 before_script:
   - composer require satooshi/php-coveralls:1.*
-  - composer install -no-interaction
+  - composer install -n
 
 script:
   - vendor/bin/phpunit --coverage-clover clover.xml
