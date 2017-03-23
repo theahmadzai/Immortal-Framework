@@ -8,9 +8,14 @@ php:
   - 7.1
   - hhvm
 
-before_script: composer install --no-interaction
+before_script:
+  - composer require satooshi/php-coveralls:1.* -no-interaction
+  - composer install --no-interaction
 
-script: vendor/bin/phpunit --coverage-clover clover.xml
+script:
+  - vendor/bin/phpunit --coverage-clover clover.xml
 
+after_script:
+  - php vendor/bin/coveralls --coverage_clover=clover.xml -v
 notifications:
   email: false

@@ -18,7 +18,6 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory>./Immortal/</directory>
-            <directory>./tests/</directory>
         </whitelist>
     </filter>
 </phpunit>

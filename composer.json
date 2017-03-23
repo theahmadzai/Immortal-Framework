@@ -22,8 +22,9 @@
         "pimple/pimple": "^3.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "@stable",
-        "phpunit/phpunit": "@stable"
+        "phpunit/phpunit": "@stable",
+        "satooshi/php-coveralls": "^1.0",
+        "squizlabs/php_codesniffer": "@stable"
     },
     "autoload": {
         "psr-4": {

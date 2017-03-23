@@ -1,17 +1,17 @@
 engines:
   duplication:
-    enabled: true
+    enabled: false
     config:
       languages:
       - php
   fixme:
-    enabled: true
+    enabled: false
   phpmd:
     enabled: false
   phpcodesniffer:
     enabled: true
     config:
-      standard: "PHPCS"
+      standard: "PSR2"
 ratings:
   paths:
   - "**.php"
