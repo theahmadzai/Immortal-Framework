@@ -1,2 +1,3 @@
-PHP: true
+languages:
+  PHP: true
 exclude_paths: tests/*
