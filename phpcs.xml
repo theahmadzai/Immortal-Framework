@@ -1,8 +1,14 @@
 <?xml version="1.0"?>
-<ruleset name="Immortal Framework Coding Standard">
-    <description>The coding standard for Immortal Framework.</description>
-    <arg value="np"/>
+<ruleset name="Immortal Coding Standard">
+    <description>Coding standard for Immortal Framework</description>
+
+    <!-- args -->
+    <arg value="p"/>
     <arg name="colors"/>
+
+    <!-- rules -->
     <rule ref="PSR2"/>
+
+    <!-- files -->
     <file>./Immortal/</file>
 </ruleset>

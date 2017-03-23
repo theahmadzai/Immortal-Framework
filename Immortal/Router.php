@@ -1,4 +1,5 @@
 <?php
+
 namespace Immortal;
 
 class Router
@@ -41,8 +42,7 @@ class Router
                     $name       = trim(substr($part, 1), '?');
                     $type       = (strpos(trim($part, ':'), '?') === 0) ? true : false;
                     $reset_part = (strpos(trim($part, ':'), '?') === 0) ?
-                    '?(?P<' . $name . '>[^/]+)?' :
-                    '(?P<' . $name . '>[^/]+)';
+                    '?(?P<' . $name . '>[^/]+)?' : '(?P<' . $name . '>[^/]+)';
                     $url_parts[$i]     = $reset_part;
                     $url_params[$name] = $type;
                 }

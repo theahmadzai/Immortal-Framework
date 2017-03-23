@@ -1,4 +1,5 @@
 <?php
+
 namespace Immortal;
 
 class View
@@ -26,6 +27,6 @@ class View
 
     private function getErrorMessage($errorType, $errorMessage)
     {
-        return sprintf("A %s error occured: %s", $errorType, $errorMessage);
+        return sprintf('A %s error occured: %s', $errorType, $errorMessage);
     }
 }

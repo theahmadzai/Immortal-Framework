@@ -1,7 +1,10 @@
 <?php
+
 namespace Immortal\Tests;
 
-class AppTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class AppTest extends TestCase
 {
     public function test()
     {

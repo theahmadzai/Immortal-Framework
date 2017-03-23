@@ -1,8 +1,6 @@
 <?php
-namespace Immortal;
 
-use Immortal\Request;
-use Immortal\View;
+namespace Immortal;
 
 class HttpException extends \Exception
 {
