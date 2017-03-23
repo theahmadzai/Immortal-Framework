@@ -1,3 +1,19 @@
-languages:
-  PHP: true
-exclude_paths: tests/*
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+    config:
+      standard: "PSR2"
+ratings:
+  paths:
+  - "**.php"
+exclude_paths:
+- tests/*
