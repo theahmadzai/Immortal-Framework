@@ -10,7 +10,7 @@ php:
 
 before_script: composer install --no-interaction
 
-script: vendor/bin/phpunit --coverage-clover
+script: vendor/bin/phpunit --coverage-clover clover.xml
 
 notifications:
   email: false
