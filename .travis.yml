@@ -12,19 +12,17 @@ cache:
   directories:
     - $HOME/.composer/cache
 
-before_install:
-  - if [[ $TRAVIS_PHP_VERSION = hhvm ]]; then echo 'xdebug.enable = On' >> /etc/hhvm/php.ini; fi
-
-install:
-  - composer install -n
+install: true
 
 before_script:
-  - composer require satooshi/php-coveralls:1.* -n
+  - if [[ $TRAVIS_PHP_VERSION = hhvm ]]; then echo 'xdebug.enable = On' >> /etc/hhvm/php.ini; fi
 
 script:
-  - vendor/bin/phpunit --coverage-clover clover.xml
+  - composer require satooshi/php-coveralls:1.* -n
+  - composer install -n
 
 after_script:
+  - vendor/bin/phpunit --coverage-clover clover.xml
   - vendor/bin/coveralls --coverage_clover=clover.xml -v
 
 notifications:
