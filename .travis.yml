@@ -26,8 +26,6 @@ script:
 after_script:
   - vendor/bin/phpunit --coverage-clover clover.xml
   - vendor/bin/coveralls --coverage_clover=clover.xml -v
-
-after_success:
   - vendor/bin/test-reporter
 
 notifications:
