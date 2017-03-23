@@ -35,16 +35,16 @@
             "Immortal\\Tests\\": "tests"
         }
     },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
     },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "test": [
             "@phpunit",
