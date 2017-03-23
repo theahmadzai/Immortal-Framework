@@ -1,20 +1,17 @@
 engines:
   duplication:
-    enabled: false
+    enabled: true
     config:
       languages:
       - php
   fixme:
-    enabled: false
+    enabled: true
   phpmd:
-    enabled: false
+    enabled: true
   phpcodesniffer:
     enabled: true
     config:
       standard: "PSR2"
-  addons:
-    code_climate:
-        repo_token: 5ad732eac95fbf92a391bf478b0bcf2dfe76e28535a4eb23b0c262c78d11036c
 ratings:
   paths:
   - "**.php"
