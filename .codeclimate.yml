@@ -1,2 +1,2 @@
-php: true
+PHP: true
 exclude_paths: tests/*
