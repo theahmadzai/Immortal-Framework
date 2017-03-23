@@ -8,11 +8,9 @@ php:
   - 7.1
   - hhvm
 
-before_script: composer self-update
+before_script: composer install --no-interaction
 
-install: travis_retry composer install --no-interaction --prefer-source
-
-script: vendor/bin/phpunit
+script: vendor/bin/phpunit --coverage-clover
 
 notifications:
   email: false
