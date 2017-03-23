@@ -9,7 +9,9 @@ php:
   - hhvm
 
 before_script:
-  - composer require satooshi/php-coveralls:1.*
+  - composer require satooshi/php-coveralls:1.* -n
+
+install:
   - composer install -n
 
 script:

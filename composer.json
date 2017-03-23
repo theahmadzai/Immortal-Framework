@@ -23,7 +23,6 @@
     },
     "require-dev": {
         "phpunit/phpunit": "@stable",
-        "satooshi/php-coveralls": "^1.0",
         "squizlabs/php_codesniffer": "@stable"
     },
     "autoload": {
