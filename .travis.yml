@@ -22,10 +22,11 @@ before_script:
 script:
   - composer require satooshi/php-coveralls:1.* codeclimate/php-test-reporter:@dev -n
   - composer install -n
+  - pecl install xdebug
 
 after_script:
-  - vendor/bin/phpunit --coverage-clover /build/logs/clover.xml
-  - vendor/bin/coveralls --coverage_clover=/build/logs/clover.xml -v
+  - vendor/bin/phpunit --coverage-clover clover.xml
+  - vendor/bin/coveralls --coverage_clover=clover.xml -v
   - vendor/bin/test-reporter
 
 notifications:
