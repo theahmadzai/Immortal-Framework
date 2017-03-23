@@ -7,11 +7,11 @@ engines:
   fixme:
     enabled: true
   phpmd:
-    enabled: true
+    enabled: false
   phpcodesniffer:
     enabled: true
     config:
-      standard: "PSR2"
+      standard: "PHPCS"
 ratings:
   paths:
   - "**.php"
