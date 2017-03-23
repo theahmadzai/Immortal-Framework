@@ -26,8 +26,7 @@ script:
 after_script:
   - vendor/bin/phpunit --coverage-clover clover.xml
   - vendor/bin/coveralls --coverage_clover=clover.xml -v
-  - CODECLIMATE_REPO_TOKEN="5ad732eac95fbf92a391bf478b0bcf2dfe76e28535a4eb23b0c262c78d11036c"
-  - vendor/bin/test-reporter --stdout > codeclimate.json
+  - vendor/bin/test-reporter -r
 
 notifications:
   email: false
