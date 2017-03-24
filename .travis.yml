@@ -23,7 +23,7 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
-  - vendor/bin/coveralls -vvv
+  - vendor/bin/coveralls -v
 
 notifications:
   email: false
