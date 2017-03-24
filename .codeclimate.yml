@@ -14,7 +14,7 @@ engines:
       standard: "PSR2"
   php_code_coverage:
     enabled: true
-    test_command: ./vendor/bin/phpunit
+    test_command: ./vendor/bin/phpunit --coverage-text
 ratings:
   paths:
   - "**.php"
