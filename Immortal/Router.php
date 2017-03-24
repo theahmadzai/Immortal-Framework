@@ -18,7 +18,7 @@ class Router
     public static function getInstance()
     {
         if (!isset(self::$instance)) {
-            self::$instance = new Router();
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -34,16 +34,16 @@ class Router
         $routes = [];
 
         foreach ($definitions as $pattern => $route) {
-            $url_parts  = explode('/', trim($pattern, '/'));
+            $url_parts = explode('/', trim($pattern, '/'));
             $url_params = [];
 
             foreach ($url_parts as $i => $part) {
                 if (strpos($part, ':') === 0) {
-                    $name       = trim(substr($part, 1), '?');
-                    $type       = (strpos(trim($part, ':'), '?') === 0) ? true : false;
+                    $name = trim(substr($part, 1), '?');
+                    $type = (strpos(trim($part, ':'), '?') === 0) ? true : false;
                     $reset_part = (strpos(trim($part, ':'), '?') === 0) ?
-                    '?(?P<' . $name . '>[^/]+)?' : '(?P<' . $name . '>[^/]+)';
-                    $url_parts[$i]     = $reset_part;
+                    '?(?P<'.$name.'>[^/]+)?' : '(?P<'.$name.'>[^/]+)';
+                    $url_parts[$i] = $reset_part;
                     $url_params[$name] = $type;
                 }
             }
@@ -51,12 +51,12 @@ class Router
 
             if (is_callable(($route))) {
                 $params['controller'] = false;
-                $params['method']     = $route;
+                $params['method'] = $route;
             } else {
                 $route = explode('@', $route);
 
                 $params['controller'] = $route[0];
-                $params['method']     = $route[1];
+                $params['method'] = $route[1];
             }
 
             $params['params'] = $url_params;
@@ -72,7 +72,7 @@ class Router
         $url = filter_var(trim(strtolower($url), '/'), FILTER_SANITIZE_URL);
 
         foreach ($this->routes as $pattern => $params) {
-            if (preg_match('~^' . $pattern . '$~', $url, $matches)) {
+            if (preg_match('~^'.$pattern.'$~', $url, $matches)) {
                 foreach ($matches as $key => $value) {
                     if (array_key_exists($key, $params['params'])) {
                         $params['params'][$key] = $value;
