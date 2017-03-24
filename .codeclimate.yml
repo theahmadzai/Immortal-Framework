@@ -12,6 +12,9 @@ engines:
     enabled: true
     config:
       standard: "PSR2"
+  php_code_coverage:
+    enabled: true
+    test_command: ./vendor/bin/phpunit
 ratings:
   paths:
   - "**.php"

@@ -16,17 +16,18 @@ addons:
     code_climate:
         repo_token: 5ad732eac95fbf92a391bf478b0bcf2dfe76e28535a4eb23b0c262c78d11036c
 
-before_script:
+before_install:
   - if [[ $TRAVIS_PHP_VERSION = hhvm ]]; then echo 'xdebug.enable = On' >> /etc/hhvm/php.ini; fi
 
-script:
+install:
   - composer require satooshi/php-coveralls:1.* codeclimate/php-test-reporter:@dev -n
   - composer install -n
-  - pecl install xdebug
 
-after_script:
+script:
   - vendor/bin/phpunit --coverage-clover clover.xml
   - vendor/bin/coveralls --coverage_clover=clover.xml -v
+
+after_success:
   - vendor/bin/test-reporter
 
 notifications:
