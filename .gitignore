@@ -1,0 +1,9 @@
+desktop.ini
+.DS_Store
+Thumbs.db
+/.idea
+/vendor
+composer.lock
+.php_cs.cache
+clover.xml
+index.php

@@ -1,0 +1,18 @@
+---
+engines:
+  duplication:
+    config:
+      languages:
+        - php
+    enabled: true
+  fixme:
+    enabled: true
+  phan:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+exclude_paths: tests/
+ratings:
+  paths: src/

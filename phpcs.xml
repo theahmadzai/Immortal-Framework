@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="Immortal Coding Standard">
+    <description>Coding standard for Immortal Framework</description>
+
+    <!-- args -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- rules -->
+    <rule ref="PSR2"/>
+
+    <!-- files -->
+    <file>./src/</file>
+</ruleset>
