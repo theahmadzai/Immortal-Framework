@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/theahmadzai/Immortal-Framework.svg?branch=master)](https://travis-ci.org/theahmadzai/Immortal-Framework)
 [![Coverage Status](https://coveralls.io/repos/github/theahmadzai/Immortal-Framework/badge.svg?branch=master)](https://coveralls.io/github/theahmadzai/Immortal-Framework?branch=master)
 [![Code Climate](https://codeclimate.com/github/theahmadzai/Immortal-Framework/badges/gpa.svg)](https://codeclimate.com/github/theahmadzai/Immortal-Framework)
-[![HHVM Status](http://hhvm.h4cc.de/badge/theahmadzai/immortal-framework.svg?style=flat)](http://hhvm.h4cc.de/package/theahmadzai/immortal-framework)
 [![Total Downloads](https://poser.pugx.org/theahmadzai/immortal-framework/downloads)](https://packagist.org/packages/theahmadzai/immortal-framework)
 [![Latest Stable Version](https://poser.pugx.org/theahmadzai/immortal-framework/v/stable)](https://packagist.org/packages/theahmadzai/immortal-framework)
 [![License](https://poser.pugx.org/theahmadzai/immortal-framework/license)](https://packagist.org/packages/theahmadzai/immortal-framework)
